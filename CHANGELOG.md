@@ -3,6 +3,25 @@ CHANGELOG for Yii2 STARTER PROJECT TEMPLATE
 
 *should be replaced with real project changelog later*
 
+v2.0.1
+---------------------
+* Fixed admin panel pages with Select2 Kartik widgets (enabled Bootstrap4 mode through Yii::$app params)
+
+v2.0
+---------------------
+* Replaced Bootstrap 3 with Bootstrap 4
+* Replaced AdmitLTE 2.x admin theme (based on Bootstrap 3) with AdminLTE 3.0-beta (based on Bootstrap 4)
+* Refactored using View blocks: new Block widget
+
+v1.0
+---------------------
+* Added APP_KEY hash generator console command.
+* Base module has been removed 
+
+v0.9.6
+---------------------
+* Fix register page, controller missed use statement for RegisterForm.
+
 v0.9.5
 ---------------------
 * Fix yii rbac/scan for Windows OS (SettingsController generated an error for some reason)

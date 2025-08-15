@@ -85,10 +85,10 @@ Instead you can accept different parameters from server environment with `env()`
 Server environment variables can be set through web server vhost configuration, .htaccess file, 
 or .env file in project root (the simplest option).
 
-To start using the project template copy .env-example as .env in the project root and setup it.
+To start using the project template copy .env.example as .env in the project root and setup it.
 
 ### Web
-Copy `/public/.htaccess-example` as `/public/.htaccess` to enable pretty URLs support and cache/expire 
+Copy `/public/.htaccess.example` as `/public/.htaccess` to enable pretty URLs support and cache/expire 
 tokens required by Google PageSpeed Insights test.
 
 Furthermore you should check such options inside .env:
@@ -99,7 +99,11 @@ APP_DEBUG=true
 APP_KEY=wUZvVVKJyHFGDB9qK_Lop4QE1vwb4bYU
 ```
 
-*`APP_KEY` is used as cookie verification key. Unfortunately there are no post install composer script to generate it automatically*
+*`APP_KEY` is used as CSRF token (cookie verification key). In order to set or change it, run:
+ 
+```bash
+php yii security/app-key
+```
 
 ### Database
 
@@ -114,6 +118,7 @@ DB_PASS=12345
 
 **NOTES:**
 - Yii won't create the database for you, this has to be done manually before you can access it.
+- By default starter configured to work with MySQL database. If you want to use another database you need to configure dsn string inside `config/db.php` (or define env variable like `DB_DSN="mysql:host={host};dbname={dbname}"`).
 
 LAUNCH
 -------
